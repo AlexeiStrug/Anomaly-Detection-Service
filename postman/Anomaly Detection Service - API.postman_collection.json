@@ -1,0 +1,106 @@
+{
+	"info": {
+		"_postman_id": "42a72feb-dcd2-4088-9c3f-e49a4b895d29",
+		"name": "Anomaly Detection Service - API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Anomalies By ThermometerId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{apiUrl}}/v1/anomalies/thermometer/:thermometerId",
+					"host": [
+						"{{apiUrl}}"
+					],
+					"path": [
+						"v1",
+						"anomalies",
+						"thermometer",
+						":thermometerId"
+					],
+					"variable": [
+						{
+							"key": "thermometerId",
+							"value": "Thermometer1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Stream Anomalies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{apiUrl}}/v1/anomalies/stream",
+					"host": [
+						"{{apiUrl}}"
+					],
+					"path": [
+						"v1",
+						"anomalies",
+						"stream"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Anomalies By RoomId Copy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{apiUrl}}/v1/anomalies/room/:roomId",
+					"host": [
+						"{{apiUrl}}"
+					],
+					"path": [
+						"v1",
+						"anomalies",
+						"room",
+						":roomId"
+					],
+					"variable": [
+						{
+							"key": "roomId",
+							"value": "Room1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Thermometers With High Anomaly Count",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{apiUrl}}/v1/anomalies/high-threshold/:threshold",
+					"host": [
+						"{{apiUrl}}"
+					],
+					"path": [
+						"v1",
+						"anomalies",
+						"high-threshold",
+						":threshold"
+					],
+					"variable": [
+						{
+							"key": "threshold",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
